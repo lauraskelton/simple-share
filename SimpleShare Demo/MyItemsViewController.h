@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NearbyItemsViewController.h"
-#import "SimpleShare.h"
+#import "SimpleShare/SimpleShare.h"
 
 @interface MyItemsViewController : UITableViewController <NearbyItemsViewControllerDelegate, SimpleShareDelegate>
 {

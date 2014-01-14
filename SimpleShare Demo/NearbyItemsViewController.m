@@ -7,7 +7,7 @@
 //
 
 #import "NearbyItemsViewController.h"
-#import "SimpleShare.h"
+#import "SimpleShare/SimpleShare.h"
 
 @interface NearbyItemsViewController ()
 

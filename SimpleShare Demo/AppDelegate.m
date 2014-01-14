@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SimpleShare.h"
+#import "SimpleShare/SimpleShare.h"
 
 @implementation AppDelegate
 

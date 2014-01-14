@@ -32,8 +32,8 @@
     self.myItemIDs = [[NSMutableArray alloc] initWithObjects:[[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], nil];
     
     // Tell SimpleShare the item IDs we are sharing
-    [SimpleShare sharedInstance].myItemIDs = _myItemIDs;
     [SimpleShare sharedInstance].delegate = self;
+    [SimpleShare sharedInstance].myItemIDs = _myItemIDs;
 
 }
 
