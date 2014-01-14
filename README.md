@@ -12,16 +12,16 @@ SimpleShare was created by Laura Skelton.
 
 Features
 ===========
-*Easiest way to share items with nearby friends
-*Shares an array of item IDs over Bluetooth LE
-*Best way to allow users to join groups based on proximity
+* Easiest way to share items with nearby friends
+* Shares an array of item IDs over Bluetooth LE
+* Best way to allow users to join groups based on proximity
 
 Installation
 ===========
-*Open the SimpleShare Demo project and your XCode project
-*Drag the "SimpleShare" directory to your project (Make sure "Copy items into destination group folder", "Create folder references", and your target are all selected.)
-*Add the CoreBluetooth framework to your project (Under Build Phases -> Link Binary With Libraries, click the "+" to add "CoreBluetooth.framework" to your project.)
-*Create a unique UUID to identify your app in SimpleShare. You can generate one here: http://www.uuidgenerator.net . Then plug it in to your application (after importing SimpleShare.h in any file you use SimpleShare in).
+* Open the SimpleShare Demo project and your XCode project
+* Drag the "SimpleShare" directory to your project (Make sure "Copy items into destination group folder", "Create folder references", and your target are all selected.)
+* Add the CoreBluetooth framework to your project (Under Build Phases -> Link Binary With Libraries, click the "+" to add "CoreBluetooth.framework" to your project.)
+* Create a unique UUID to identify your app in SimpleShare. You can generate one here: http://www.uuidgenerator.net . Then plug it in to your application (after importing SimpleShare.h in any file you use SimpleShare in).
 
 ```objc
 #import "SimpleShare/SimpleShare.h"
