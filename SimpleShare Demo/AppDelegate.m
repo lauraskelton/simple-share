@@ -16,7 +16,7 @@
     // Override point for customization after application launch.
     
 #warning add a unique UUID for your app here. you can create one here: http://www.uuidgenerator.net
-    [SimpleShare sharedInstance].simpleShareAppID = @"1fca3ba0-7c97-11e3-baa7-0800200c9a66";
+    [SimpleShare sharedInstance].simpleShareAppID = @"your-uuid-goes-here";
     
     return YES;
 }
