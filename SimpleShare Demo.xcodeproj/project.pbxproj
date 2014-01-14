@@ -14,13 +14,18 @@
 		829589341881CD1D00C755C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589331881CD1D00C755C9 /* main.m */; };
 		829589381881CD1D00C755C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589371881CD1D00C755C9 /* AppDelegate.m */; };
 		8295893B1881CD1D00C755C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829589391881CD1D00C755C9 /* Main.storyboard */; };
-		8295893E1881CD1D00C755C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8295893D1881CD1D00C755C9 /* ViewController.m */; };
 		829589401881CD1D00C755C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8295893F1881CD1D00C755C9 /* Images.xcassets */; };
 		829589471881CD1D00C755C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829589461881CD1D00C755C9 /* XCTest.framework */; };
 		829589481881CD1D00C755C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829589271881CD1D00C755C9 /* Foundation.framework */; };
 		829589491881CD1D00C755C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8295892B1881CD1D00C755C9 /* UIKit.framework */; };
 		829589511881CD1D00C755C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8295894F1881CD1D00C755C9 /* InfoPlist.strings */; };
 		829589531881CD1D00C755C9 /* SimpleShare_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589521881CD1D00C755C9 /* SimpleShare_DemoTests.m */; };
+		8295895E1881CD4900C755C9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8295895D1881CD4900C755C9 /* CoreBluetooth.framework */; };
+		829589611881CD6A00C755C9 /* SimpleShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589601881CD6A00C755C9 /* SimpleShare.m */; };
+		829589641881CD8600C755C9 /* SSShareItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589631881CD8600C755C9 /* SSShareItemManager.m */; };
+		829589671881CD9800C755C9 /* SSFindItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589661881CD9800C755C9 /* SSFindItemManager.m */; };
+		829589711881D9A400C755C9 /* MyItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589701881D9A400C755C9 /* MyItemsViewController.m */; };
+		829589741881D9AE00C755C9 /* NearbyItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829589731881D9AE00C755C9 /* NearbyItemsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +50,23 @@
 		829589361881CD1D00C755C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		829589371881CD1D00C755C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8295893A1881CD1D00C755C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8295893C1881CD1D00C755C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8295893D1881CD1D00C755C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8295893F1881CD1D00C755C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		829589451881CD1D00C755C9 /* SimpleShare DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleShare DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829589461881CD1D00C755C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8295894E1881CD1D00C755C9 /* SimpleShare DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleShare DemoTests-Info.plist"; sourceTree = "<group>"; };
 		829589501881CD1D00C755C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		829589521881CD1D00C755C9 /* SimpleShare_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleShare_DemoTests.m; sourceTree = "<group>"; };
+		8295895D1881CD4900C755C9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8295895F1881CD6A00C755C9 /* SimpleShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleShare.h; sourceTree = "<group>"; };
+		829589601881CD6A00C755C9 /* SimpleShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleShare.m; sourceTree = "<group>"; };
+		829589621881CD8600C755C9 /* SSShareItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSShareItemManager.h; sourceTree = "<group>"; };
+		829589631881CD8600C755C9 /* SSShareItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSShareItemManager.m; sourceTree = "<group>"; };
+		829589651881CD9800C755C9 /* SSFindItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFindItemManager.h; sourceTree = "<group>"; };
+		829589661881CD9800C755C9 /* SSFindItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFindItemManager.m; sourceTree = "<group>"; };
+		8295896F1881D9A400C755C9 /* MyItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItemsViewController.h; sourceTree = "<group>"; };
+		829589701881D9A400C755C9 /* MyItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyItemsViewController.m; sourceTree = "<group>"; };
+		829589721881D9AE00C755C9 /* NearbyItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyItemsViewController.h; sourceTree = "<group>"; };
+		829589731881D9AE00C755C9 /* NearbyItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyItemsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8295895E1881CD4900C755C9 /* CoreBluetooth.framework in Frameworks */,
 				8295892A1881CD1D00C755C9 /* CoreGraphics.framework in Frameworks */,
 				8295892C1881CD1D00C755C9 /* UIKit.framework in Frameworks */,
 				829589281881CD1D00C755C9 /* Foundation.framework in Frameworks */,
@@ -101,6 +116,7 @@
 		829589261881CD1D00C755C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8295895D1881CD4900C755C9 /* CoreBluetooth.framework */,
 				829589271881CD1D00C755C9 /* Foundation.framework */,
 				829589291881CD1D00C755C9 /* CoreGraphics.framework */,
 				8295892B1881CD1D00C755C9 /* UIKit.framework */,
@@ -112,11 +128,11 @@
 		8295892D1881CD1D00C755C9 /* SimpleShare Demo */ = {
 			isa = PBXGroup;
 			children = (
+				8295895C1881CD2400C755C9 /* SimpleShare */,
+				829589681881D96300C755C9 /* View Controllers */,
 				829589361881CD1D00C755C9 /* AppDelegate.h */,
 				829589371881CD1D00C755C9 /* AppDelegate.m */,
 				829589391881CD1D00C755C9 /* Main.storyboard */,
-				8295893C1881CD1D00C755C9 /* ViewController.h */,
-				8295893D1881CD1D00C755C9 /* ViewController.m */,
 				8295893F1881CD1D00C755C9 /* Images.xcassets */,
 				8295892E1881CD1D00C755C9 /* Supporting Files */,
 			);
@@ -150,6 +166,30 @@
 				8295894F1881CD1D00C755C9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8295895C1881CD2400C755C9 /* SimpleShare */ = {
+			isa = PBXGroup;
+			children = (
+				8295895F1881CD6A00C755C9 /* SimpleShare.h */,
+				829589601881CD6A00C755C9 /* SimpleShare.m */,
+				829589621881CD8600C755C9 /* SSShareItemManager.h */,
+				829589631881CD8600C755C9 /* SSShareItemManager.m */,
+				829589651881CD9800C755C9 /* SSFindItemManager.h */,
+				829589661881CD9800C755C9 /* SSFindItemManager.m */,
+			);
+			name = SimpleShare;
+			sourceTree = "<group>";
+		};
+		829589681881D96300C755C9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8295896F1881D9A400C755C9 /* MyItemsViewController.h */,
+				829589701881D9A400C755C9 /* MyItemsViewController.m */,
+				829589721881D9AE00C755C9 /* NearbyItemsViewController.h */,
+				829589731881D9AE00C755C9 /* NearbyItemsViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8295893E1881CD1D00C755C9 /* ViewController.m in Sources */,
+				829589641881CD8600C755C9 /* SSShareItemManager.m in Sources */,
+				829589711881D9A400C755C9 /* MyItemsViewController.m in Sources */,
+				829589741881D9AE00C755C9 /* NearbyItemsViewController.m in Sources */,
+				829589611881CD6A00C755C9 /* SimpleShare.m in Sources */,
+				829589671881CD9800C755C9 /* SSFindItemManager.m in Sources */,
 				829589381881CD1D00C755C9 /* AppDelegate.m in Sources */,
 				829589341881CD1D00C755C9 /* main.m in Sources */,
 			);
