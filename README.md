@@ -15,6 +15,7 @@ Features
 * Easiest way to share items with nearby friends
 * Shares an array of item IDs over Bluetooth LE
 * Best way to allow users to join groups based on proximity
+* Shares info even when the app is in background mode (unlike iBeacons)
 
 Installation
 ===========
