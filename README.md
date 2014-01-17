@@ -20,7 +20,7 @@ Features
 Installation
 ===========
 * Open the SimpleShare Demo project and your XCode project
-* Drag the "SimpleShare" directory to your project (Make sure "Copy items into destination group folder", "Create folder references", and your target are all selected.)
+* Drag the "SimpleShare" directory to your project (Make sure "Copy items into destination group folder", "Create groups for any added folders", and your target are all selected.)
 * Add the CoreBluetooth framework to your project (Under Build Phases -> Link Binary With Libraries, click the "+" to add "CoreBluetooth.framework" to your project.)
 * In your app's Info.plist file, add "Required Background Modes" -> "App shares data using CoreBluetooth", if you would like your devices that are sharing items to keep sharing even if they are in background mode.
 * Create a unique UUID to identify your app in SimpleShare. You can generate one here: http://www.uuidgenerator.net . Then plug it in to your application (after importing SimpleShare.h in any file you use SimpleShare in).
