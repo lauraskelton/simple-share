@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0E104AE0-E66D-4461-8973-DCBF37044AB4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleShare Flickr Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04929499-8E3E-4565-BE2D-B0E5C1087961</key>
+		<string>ssh://github.com/lauraskelton/simple-share.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SimpleShare Flickr Demo/SimpleShare Flickr Demo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04929499-8E3E-4565-BE2D-B0E5C1087961</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/lauraskelton/simple-share.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04929499-8E3E-4565-BE2D-B0E5C1087961</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04929499-8E3E-4565-BE2D-B0E5C1087961</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SimpleShare Demo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

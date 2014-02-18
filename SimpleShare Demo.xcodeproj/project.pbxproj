@@ -10,6 +10,23 @@
 		8254F2851889C5100018F42F /* SimpleShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8254F2801889C5100018F42F /* SimpleShare.m */; };
 		8254F2861889C5100018F42F /* SSFindItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8254F2821889C5100018F42F /* SSFindItemManager.m */; };
 		8254F2871889C5100018F42F /* SSShareItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8254F2841889C5100018F42F /* SSShareItemManager.m */; };
+		828B09BD18B4130B00780610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B099A18B4130A00780610 /* AppDelegate.m */; };
+		828B09BE18B4130B00780610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828B099B18B4130A00780610 /* Main.storyboard */; };
+		828B09BF18B4130B00780610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 828B099D18B4130A00780610 /* InfoPlist.strings */; };
+		828B09C018B4130B00780610 /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09A018B4130A00780610 /* Flickr.m */; };
+		828B09C118B4130B00780610 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09A218B4130A00780610 /* FlickrPhoto.m */; };
+		828B09C218B4130B00780610 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828B09A318B4130A00780610 /* Images.xcassets */; };
+		828B09C318B4130B00780610 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09A418B4130A00780610 /* main.m */; };
+		828B09C418B4130B00780610 /* SimpleShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09A718B4130A00780610 /* SimpleShare.m */; };
+		828B09C518B4130B00780610 /* SSFindItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09A918B4130A00780610 /* SSFindItemManager.m */; };
+		828B09C618B4130B00780610 /* SSShareItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09AB18B4130A00780610 /* SSShareItemManager.m */; };
+		828B09C718B4130B00780610 /* SimpleShare Flickr Demo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 828B09AC18B4130A00780610 /* SimpleShare Flickr Demo-Info.plist */; };
+		828B09C818B4130B00780610 /* MyPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09B018B4130A00780610 /* MyPhotosViewController.m */; };
+		828B09C918B4130B00780610 /* NearbyPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09B218B4130A00780610 /* NearbyPhotosViewController.m */; };
+		828B09CA18B4130B00780610 /* TempFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09B418B4130A00780610 /* TempFlickrViewController.m */; };
+		828B09CB18B4130B00780610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 828B09B918B4130B00780610 /* InfoPlist.strings */; };
+		828B09CC18B4130B00780610 /* SimpleShare Flickr DemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 828B09BB18B4130B00780610 /* SimpleShare Flickr DemoTests-Info.plist */; };
+		828B09CD18B4130B00780610 /* SimpleShare_Flickr_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B09BC18B4130B00780610 /* SimpleShare_Flickr_DemoTests.m */; };
 		829589281881CD1D00C755C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829589271881CD1D00C755C9 /* Foundation.framework */; };
 		8295892A1881CD1D00C755C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829589291881CD1D00C755C9 /* CoreGraphics.framework */; };
 		8295892C1881CD1D00C755C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8295892B1881CD1D00C755C9 /* UIKit.framework */; };
@@ -29,6 +46,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		828B09D018B4130B00780610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 828B09B518B4130A00780610 /* SimpleShare Flickr Demo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82C5ED4918A97A2800C43D23;
+			remoteInfo = "SimpleShare Flickr Demo";
+		};
+		828B09D218B4130B00780610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 828B09B518B4130A00780610 /* SimpleShare Flickr Demo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82C5ED6A18A97A2800C43D23;
+			remoteInfo = "SimpleShare Flickr DemoTests";
+		};
 		8295894A1881CD1D00C755C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8295891C1881CD1D00C755C9 /* Project object */;
@@ -45,6 +76,34 @@
 		8254F2821889C5100018F42F /* SSFindItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFindItemManager.m; sourceTree = "<group>"; };
 		8254F2831889C5100018F42F /* SSShareItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSShareItemManager.h; sourceTree = "<group>"; };
 		8254F2841889C5100018F42F /* SSShareItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSShareItemManager.m; sourceTree = "<group>"; };
+		828B099918B4130A00780610 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		828B099A18B4130A00780610 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		828B099C18B4130A00780610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		828B099E18B4130A00780610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		828B099F18B4130A00780610 /* Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flickr.h; sourceTree = "<group>"; };
+		828B09A018B4130A00780610 /* Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flickr.m; sourceTree = "<group>"; };
+		828B09A118B4130A00780610 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
+		828B09A218B4130A00780610 /* FlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhoto.m; sourceTree = "<group>"; };
+		828B09A318B4130A00780610 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		828B09A418B4130A00780610 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		828B09A618B4130A00780610 /* SimpleShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleShare.h; sourceTree = "<group>"; };
+		828B09A718B4130A00780610 /* SimpleShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleShare.m; sourceTree = "<group>"; };
+		828B09A818B4130A00780610 /* SSFindItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFindItemManager.h; sourceTree = "<group>"; };
+		828B09A918B4130A00780610 /* SSFindItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFindItemManager.m; sourceTree = "<group>"; };
+		828B09AA18B4130A00780610 /* SSShareItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSShareItemManager.h; sourceTree = "<group>"; };
+		828B09AB18B4130A00780610 /* SSShareItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSShareItemManager.m; sourceTree = "<group>"; };
+		828B09AC18B4130A00780610 /* SimpleShare Flickr Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleShare Flickr Demo-Info.plist"; sourceTree = "<group>"; };
+		828B09AD18B4130A00780610 /* SimpleShare Flickr Demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleShare Flickr Demo-Prefix.pch"; sourceTree = "<group>"; };
+		828B09AF18B4130A00780610 /* MyPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPhotosViewController.h; sourceTree = "<group>"; };
+		828B09B018B4130A00780610 /* MyPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPhotosViewController.m; sourceTree = "<group>"; };
+		828B09B118B4130A00780610 /* NearbyPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPhotosViewController.h; sourceTree = "<group>"; };
+		828B09B218B4130A00780610 /* NearbyPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPhotosViewController.m; sourceTree = "<group>"; };
+		828B09B318B4130A00780610 /* TempFlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempFlickrViewController.h; sourceTree = "<group>"; };
+		828B09B418B4130A00780610 /* TempFlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempFlickrViewController.m; sourceTree = "<group>"; };
+		828B09B518B4130A00780610 /* SimpleShare Flickr Demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "SimpleShare Flickr Demo.xcodeproj"; sourceTree = "<group>"; };
+		828B09BA18B4130B00780610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		828B09BB18B4130B00780610 /* SimpleShare Flickr DemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleShare Flickr DemoTests-Info.plist"; sourceTree = "<group>"; };
+		828B09BC18B4130B00780610 /* SimpleShare_Flickr_DemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleShare_Flickr_DemoTests.m; sourceTree = "<group>"; };
 		829589241881CD1D00C755C9 /* SimpleShare Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleShare Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829589271881CD1D00C755C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		829589291881CD1D00C755C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +166,82 @@
 			path = SimpleShare;
 			sourceTree = "<group>";
 		};
+		828B099718B4130A00780610 /* SimpleShare Flickr Demo */ = {
+			isa = PBXGroup;
+			children = (
+				828B099818B4130A00780610 /* SimpleShare Flickr Demo */,
+				828B09B518B4130A00780610 /* SimpleShare Flickr Demo.xcodeproj */,
+				828B09B818B4130B00780610 /* SimpleShare Flickr DemoTests */,
+			);
+			path = "SimpleShare Flickr Demo";
+			sourceTree = "<group>";
+		};
+		828B099818B4130A00780610 /* SimpleShare Flickr Demo */ = {
+			isa = PBXGroup;
+			children = (
+				828B099918B4130A00780610 /* AppDelegate.h */,
+				828B099A18B4130A00780610 /* AppDelegate.m */,
+				828B099B18B4130A00780610 /* Main.storyboard */,
+				828B099D18B4130A00780610 /* InfoPlist.strings */,
+				828B099F18B4130A00780610 /* Flickr.h */,
+				828B09A018B4130A00780610 /* Flickr.m */,
+				828B09A118B4130A00780610 /* FlickrPhoto.h */,
+				828B09A218B4130A00780610 /* FlickrPhoto.m */,
+				828B09A318B4130A00780610 /* Images.xcassets */,
+				828B09A418B4130A00780610 /* main.m */,
+				828B09A518B4130A00780610 /* SimpleShare */,
+				828B09AC18B4130A00780610 /* SimpleShare Flickr Demo-Info.plist */,
+				828B09AD18B4130A00780610 /* SimpleShare Flickr Demo-Prefix.pch */,
+				828B09AE18B4130A00780610 /* View Controllers */,
+			);
+			path = "SimpleShare Flickr Demo";
+			sourceTree = "<group>";
+		};
+		828B09A518B4130A00780610 /* SimpleShare */ = {
+			isa = PBXGroup;
+			children = (
+				828B09A618B4130A00780610 /* SimpleShare.h */,
+				828B09A718B4130A00780610 /* SimpleShare.m */,
+				828B09A818B4130A00780610 /* SSFindItemManager.h */,
+				828B09A918B4130A00780610 /* SSFindItemManager.m */,
+				828B09AA18B4130A00780610 /* SSShareItemManager.h */,
+				828B09AB18B4130A00780610 /* SSShareItemManager.m */,
+			);
+			path = SimpleShare;
+			sourceTree = "<group>";
+		};
+		828B09AE18B4130A00780610 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				828B09AF18B4130A00780610 /* MyPhotosViewController.h */,
+				828B09B018B4130A00780610 /* MyPhotosViewController.m */,
+				828B09B118B4130A00780610 /* NearbyPhotosViewController.h */,
+				828B09B218B4130A00780610 /* NearbyPhotosViewController.m */,
+				828B09B318B4130A00780610 /* TempFlickrViewController.h */,
+				828B09B418B4130A00780610 /* TempFlickrViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		828B09B618B4130A00780610 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				828B09D118B4130B00780610 /* SimpleShare Flickr Demo.app */,
+				828B09D318B4130B00780610 /* SimpleShare Flickr DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		828B09B818B4130B00780610 /* SimpleShare Flickr DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				828B09B918B4130B00780610 /* InfoPlist.strings */,
+				828B09BB18B4130B00780610 /* SimpleShare Flickr DemoTests-Info.plist */,
+				828B09BC18B4130B00780610 /* SimpleShare_Flickr_DemoTests.m */,
+			);
+			path = "SimpleShare Flickr DemoTests";
+			sourceTree = "<group>";
+		};
 		8295891B1881CD1D00C755C9 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +249,7 @@
 				8295894C1881CD1D00C755C9 /* SimpleShare DemoTests */,
 				829589261881CD1D00C755C9 /* Frameworks */,
 				829589251881CD1D00C755C9 /* Products */,
+				828B099718B4130A00780610 /* SimpleShare Flickr Demo */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,11 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				8254F27E1889C5100018F42F /* SimpleShare */,
+				82C5ED8D18A97B4600C43D23 /* App Delegate */,
 				829589681881D96300C755C9 /* View Controllers */,
-				829589361881CD1D00C755C9 /* AppDelegate.h */,
-				829589371881CD1D00C755C9 /* AppDelegate.m */,
-				829589391881CD1D00C755C9 /* Main.storyboard */,
-				8295893F1881CD1D00C755C9 /* Images.xcassets */,
+				82C5ED8C18A97B3100C43D23 /* Resources */,
 				8295892E1881CD1D00C755C9 /* Supporting Files */,
 			);
 			path = "SimpleShare Demo";
@@ -190,6 +324,24 @@
 				829589731881D9AE00C755C9 /* NearbyItemsViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		82C5ED8C18A97B3100C43D23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				829589391881CD1D00C755C9 /* Main.storyboard */,
+				8295893F1881CD1D00C755C9 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		82C5ED8D18A97B4600C43D23 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				829589361881CD1D00C755C9 /* AppDelegate.h */,
+				829589371881CD1D00C755C9 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +407,12 @@
 			mainGroup = 8295891B1881CD1D00C755C9;
 			productRefGroup = 829589251881CD1D00C755C9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 828B09B618B4130A00780610 /* Products */;
+					ProjectRef = 828B09B518B4130A00780610 /* SimpleShare Flickr Demo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				829589231881CD1D00C755C9 /* SimpleShare Demo */,
@@ -263,14 +421,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		828B09D118B4130B00780610 /* SimpleShare Flickr Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SimpleShare Flickr Demo.app";
+			remoteRef = 828B09D018B4130B00780610 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		828B09D318B4130B00780610 /* SimpleShare Flickr DemoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SimpleShare Flickr DemoTests.xctest";
+			remoteRef = 828B09D218B4130B00780610 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		829589221881CD1D00C755C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				829589401881CD1D00C755C9 /* Images.xcassets in Resources */,
+				828B09CB18B4130B00780610 /* InfoPlist.strings in Resources */,
 				829589321881CD1D00C755C9 /* InfoPlist.strings in Resources */,
+				828B09CC18B4130B00780610 /* SimpleShare Flickr DemoTests-Info.plist in Resources */,
 				8295893B1881CD1D00C755C9 /* Main.storyboard in Resources */,
+				828B09C218B4130B00780610 /* Images.xcassets in Resources */,
+				828B09BE18B4130B00780610 /* Main.storyboard in Resources */,
+				828B09C718B4130B00780610 /* SimpleShare Flickr Demo-Info.plist in Resources */,
+				828B09BF18B4130B00780610 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,11 +471,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				829589711881D9A400C755C9 /* MyItemsViewController.m in Sources */,
+				828B09C518B4130B00780610 /* SSFindItemManager.m in Sources */,
 				8254F2851889C5100018F42F /* SimpleShare.m in Sources */,
 				829589741881D9AE00C755C9 /* NearbyItemsViewController.m in Sources */,
+				828B09C918B4130B00780610 /* NearbyPhotosViewController.m in Sources */,
+				828B09CD18B4130B00780610 /* SimpleShare_Flickr_DemoTests.m in Sources */,
+				828B09C118B4130B00780610 /* FlickrPhoto.m in Sources */,
 				8254F2861889C5100018F42F /* SSFindItemManager.m in Sources */,
+				828B09CA18B4130B00780610 /* TempFlickrViewController.m in Sources */,
+				828B09C418B4130B00780610 /* SimpleShare.m in Sources */,
+				828B09C018B4130B00780610 /* Flickr.m in Sources */,
+				828B09BD18B4130B00780610 /* AppDelegate.m in Sources */,
 				829589381881CD1D00C755C9 /* AppDelegate.m in Sources */,
 				8254F2871889C5100018F42F /* SSShareItemManager.m in Sources */,
+				828B09C318B4130B00780610 /* main.m in Sources */,
+				828B09C618B4130B00780610 /* SSShareItemManager.m in Sources */,
+				828B09C818B4130B00780610 /* MyPhotosViewController.m in Sources */,
 				829589341881CD1D00C755C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +510,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		828B099B18B4130A00780610 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				828B099C18B4130A00780610 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		828B099D18B4130A00780610 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				828B099E18B4130A00780610 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		828B09B918B4130B00780610 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				828B09BA18B4130B00780610 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		829589301881CD1D00C755C9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

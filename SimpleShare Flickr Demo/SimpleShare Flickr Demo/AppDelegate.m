@@ -7,12 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "SimpleShare/SimpleShare.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+#warning add a unique UUID for your app here. you can create one here: http://www.uuidgenerator.net
+    //[SimpleShare sharedInstance].simpleShareAppID = @"your-uuid-goes-here";
+    [SimpleShare sharedInstance].simpleShareAppID = @"b6db6f36-f4bd-4b11-807b-560371c0d10b";
+    
     return YES;
 }
 							
