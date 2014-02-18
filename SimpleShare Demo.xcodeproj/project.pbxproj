@@ -142,11 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				8254F27E1889C5100018F42F /* SimpleShare */,
+				82C5ED8D18A97B4600C43D23 /* App Delegate */,
 				829589681881D96300C755C9 /* View Controllers */,
-				829589361881CD1D00C755C9 /* AppDelegate.h */,
-				829589371881CD1D00C755C9 /* AppDelegate.m */,
-				829589391881CD1D00C755C9 /* Main.storyboard */,
-				8295893F1881CD1D00C755C9 /* Images.xcassets */,
+				82C5ED8C18A97B3100C43D23 /* Resources */,
 				8295892E1881CD1D00C755C9 /* Supporting Files */,
 			);
 			path = "SimpleShare Demo";
@@ -190,6 +188,24 @@
 				829589731881D9AE00C755C9 /* NearbyItemsViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		82C5ED8C18A97B3100C43D23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				829589391881CD1D00C755C9 /* Main.storyboard */,
+				8295893F1881CD1D00C755C9 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		82C5ED8D18A97B4600C43D23 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				829589361881CD1D00C755C9 /* AppDelegate.h */,
+				829589371881CD1D00C755C9 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
