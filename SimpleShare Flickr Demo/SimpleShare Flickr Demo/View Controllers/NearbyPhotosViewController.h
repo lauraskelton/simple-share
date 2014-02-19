@@ -9,16 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @class  NearbyPhotosViewController;
+@class FlickrPhoto;
 
 @protocol NearbyPhotosViewControllerDelegate <NSObject>
-- (void)nearbyPhotosViewControllerAddedPhoto:(NSString *)photoID;
+- (void)nearbyPhotosViewControllerAddedPhoto:(FlickrPhoto *)flickrPhoto;
 - (void)nearbyPhotosViewControllerDidCancel:(NearbyPhotosViewController *)controller;
 @end
 
 @interface NearbyPhotosViewController : UITableViewController
 
 @property (nonatomic, assign) id <NearbyPhotosViewControllerDelegate> delegate;
-@property (nonatomic, retain) NSMutableArray *nearbyPhotoIDs;
+@property (nonatomic, retain) NSMutableArray *nearbyPhotos;
 
 -(IBAction)cancel:(id)sender;
 

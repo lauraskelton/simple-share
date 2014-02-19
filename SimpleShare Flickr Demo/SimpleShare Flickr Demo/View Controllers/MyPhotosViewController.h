@@ -14,6 +14,7 @@
 {
     NearbyPhotosViewController *_nearbyPhotosController;
     NSMutableArray *_nearbyPhotos;
+    NSMutableArray *_nearbyPhotoIDs;
     IBOutlet UIBarButtonItem *_findPhotosButton;
     IBOutlet UIBarButtonItem *_sharePhotosButton;
     UIBarButtonItem *_findingPhotosActivityIndicator;
@@ -23,6 +24,7 @@
 
 @property (nonatomic, retain) NSMutableArray *myPhotos;
 @property (nonatomic, retain) NSMutableArray *myPhotoIDs;
+
 
 -(IBAction)findNearbyPhotos:(id)sender;
 -(IBAction)shareMyPhotos:(id)sender;

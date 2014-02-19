@@ -8,13 +8,14 @@
 
 #import "MyPhotosViewController.h"
 #import "Flickr.h"
+#import "MyPhotoDetailViewController.h"
 
 @interface MyPhotosViewController ()
 
 @end
 
 @implementation MyPhotosViewController
-@synthesize myPhotos = _myPhotos;
+@synthesize myPhotos = _myPhotos, myPhotoIDs = _myPhotoIDs;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,18 +30,7 @@
 {
     [super viewDidLoad];
     
-    // Normally we'd get this array from a server that sends us a list of the user's items. For simplicity we're just creating a randomly generated array of item ID's to share.
-    //self.myPhotos = [[NSMutableArray alloc] initWithObjects:[[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], [[NSUUID UUID] UUIDString], nil];
-#warning load previous session photo ids
-    // Tell SimpleShare the item IDs we are sharing
     [SimpleShare sharedInstance].delegate = self;
-    
-    NSMutableArray *tmpArray;
-    for (FlickrPhoto *aPhoto in _myPhotos) {
-        [tmpArray addObject:aPhoto.photoID];
-    }
-    [SimpleShare sharedInstance].myItemIDs = tmpArray;
-    tmpArray = nil;
     
 }
 
@@ -59,13 +49,32 @@
 
 #pragma mark - Item IDs Array
 
--(void)setmyPhotos:(NSMutableArray *)newMyPhotos
+-(void)setMyPhotoIDs:(NSMutableArray *)newMyPhotoIDs
 {
-    if (_myPhotos != newMyPhotos) {
-        _myPhotos = newMyPhotos;
+    NSLog(@"setMyPhotoIDs: %@", newMyPhotoIDs);
+    if (_myPhotoIDs != newMyPhotoIDs) {
+        _myPhotoIDs = newMyPhotoIDs;
+        _myPhotos = nil;
         
-        // reload the table to display new added items
-        [self.tableView reloadData];
+        // Update SimpleShare with the photo IDs we are sharing
+        [SimpleShare sharedInstance].myItemIDs = _myPhotoIDs;
+        
+        [[Flickr sharedInstance] getFlickrInfoForPhotoIDsArray:_myPhotoIDs completionBlock:^(NSArray *photoIDsArray, NSArray *photoResultsArray, NSError *error) {
+            if(photoResultsArray && [photoResultsArray count] > 0) {
+                NSLog(@"result photos array");
+                // 2
+                _myPhotos = [photoResultsArray mutableCopy];
+                
+                // 3
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // reload search results data
+                    NSLog(@"reloading table");
+                    [self.tableView reloadData];
+                });
+            } else { // 1
+                NSLog(@"Error getting photo info from Flickr: %@", error.localizedDescription);
+            } }];
+        
     }
 }
 
@@ -131,34 +140,58 @@
             // reload the tableview to remove the item from the search results list
             [self.searchDisplayController.searchResultsTableView reloadData];
         }
+    } else if (tableView == self.tableView) {
+        [self performSegueWithIdentifier:@"showPhotoDetail" sender:self];
     }
 }
 
 #pragma mark - Flickr methods
 - (void)addFlickrPhoto:(FlickrPhoto *)flickrPhoto
 {
+    NSLog(@"adding photo: %@", flickrPhoto);
+    
+    if (_myPhotos == nil) {
+        _myPhotos = [[NSMutableArray alloc] init];
+    }
+    
     [_myPhotos addObject:flickrPhoto];
     
     [self.tableView reloadData];
     
     // Update SimpleShare with the photo IDs we are sharing
+
+    if (_myPhotoIDs == nil) {
+        _myPhotoIDs = [[NSMutableArray alloc] init];
+    }
+    
     [_myPhotoIDs addObject:flickrPhoto.photoID];
-    NSMutableArray *tmpArray = [SimpleShare sharedInstance].myItemIDs;
-    [tmpArray addObject:flickrPhoto.photoID];
-    [SimpleShare sharedInstance].myItemIDs = tmpArray;
-    tmpArray = nil;
+    [SimpleShare sharedInstance].myItemIDs = _myPhotoIDs;
+    NSLog(@"simpleshare myitemids: %@", [SimpleShare sharedInstance].myItemIDs);
 }
 
 #pragma mark - NearbyPhotosViewController Delegate
 
-- (void)nearbyPhotosViewControllerAddedPhoto:(NSString *)photoID
+- (void)nearbyPhotosViewControllerAddedPhoto:(FlickrPhoto *)flickrPhoto
 {
-    [_myPhotos addObject:photoID];
-    
-    [self.tableView reloadData];
+    if (_myPhotoIDs == nil) {
+        _myPhotoIDs = [[NSMutableArray alloc] init];
+    }
+    [_myPhotoIDs addObject:flickrPhoto.photoID];
     
     // Update SimpleShare with the photo IDs we are sharing
-    [SimpleShare sharedInstance].myItemIDs = _myPhotos;
+    [SimpleShare sharedInstance].myItemIDs = _myPhotoIDs;
+    
+    if (_myPhotos == nil) {
+        _myPhotos = [[NSMutableArray alloc] init];
+    }
+    
+    if ([_myPhotos containsObject:flickrPhoto] == NO) {
+        [_myPhotos addObject:flickrPhoto];
+    }
+    
+    // reload table data
+    [self.tableView reloadData];
+    
 }
 
 - (void)nearbyPhotosViewControllerDidCancel:(NearbyPhotosViewController *)controller
@@ -180,24 +213,51 @@
 {
     // get rid of old found nearby items
     _nearbyPhotos = nil;
+    _nearbyPhotoIDs = nil;
     
-    _nearbyPhotos = [[NSMutableArray alloc] init];
+    _nearbyPhotoIDs = [[NSMutableArray alloc] init];
     
     // add the first item to the array
-    [_nearbyPhotos addObjectsFromArray:itemIDs];
+    [_nearbyPhotoIDs addObjectsFromArray:itemIDs];
     
-    // pop up nearby items controller to show found item
-    [self performSegueWithIdentifier:@"addNearbyPhotos" sender:self];
+    [[Flickr sharedInstance] getFlickrInfoForPhotoIDsArray:itemIDs completionBlock:^(NSArray *photoIDsArray, NSArray *photoResultsArray, NSError *error) {
+        if(photoResultsArray && [photoResultsArray count] > 0) {
+            NSLog(@"result photos array");
+            // 2
+            _nearbyPhotos = [photoResultsArray mutableCopy];
+            
+            // 3
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // pop up nearby photos controller to show found photo
+                [self performSegueWithIdentifier:@"addNearbyPhotos" sender:self];
+            });
+        } else { // 1
+            NSLog(@"Error getting photo info from Flickr: %@", error.localizedDescription);
+        } }];
+    
 }
 
 - (void)simpleShareFoundMoreItems:(NSArray *)itemIDs
 {
     // add the new item to the array
-    [_nearbyPhotos addObjectsFromArray:itemIDs];
+    [_nearbyPhotoIDs addObjectsFromArray:itemIDs];
     
-    // update nearby Photos controller
-    [_nearbyPhotosController setNearbyPhotoIDs:_nearbyPhotos];
-    [_nearbyPhotosController.tableView reloadData];
+    [[Flickr sharedInstance] getFlickrInfoForPhotoIDsArray:itemIDs completionBlock:^(NSArray *photoIDsArray, NSArray *photoResultsArray, NSError *error) {
+        if(photoResultsArray && [photoResultsArray count] > 0) {
+            NSLog(@"result photos array");
+            // 2
+            [_nearbyPhotos addObjectsFromArray:photoResultsArray];
+            
+            // 3
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // update Nearby Photos controller
+                [_nearbyPhotosController setNearbyPhotos:_nearbyPhotos];
+                [_nearbyPhotosController.tableView reloadData];
+            });
+        } else { // 1
+            NSLog(@"Error getting photo info from Flickr: %@", error.localizedDescription);
+        } }];
+    
 }
 
 - (void)simpleShareFoundNoItems:(SimpleShare *)simpleShare
@@ -223,10 +283,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"addNearbyPhotos"]) {
+        NSLog(@"performing segue");
         UINavigationController *navController = (UINavigationController *)[segue destinationViewController];
         _nearbyPhotosController = (NearbyPhotosViewController *)[navController topViewController];
         [_nearbyPhotosController setDelegate:self];
-        [_nearbyPhotosController setNearbyPhotoIDs:_nearbyPhotos];
+        [_nearbyPhotosController setNearbyPhotos:_nearbyPhotos];
+        NSLog(@"set nearbyphotos: %@", _nearbyPhotos);
+
+    }
+    else if ([segue.identifier isEqualToString:@"showPhotoDetail"]) {
+        
+        MyPhotoDetailViewController *detailController = (MyPhotoDetailViewController *)segue.destinationViewController;
+        detailController.flickrPhoto = [_myPhotos objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
 }
 
@@ -282,6 +350,8 @@
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
 {
+    searchResultsArray = nil;
+    [self.searchDisplayController.searchResultsTableView reloadData];
     [self.tableView reloadData];
     NSLog(@"reloading main table view data");
 }

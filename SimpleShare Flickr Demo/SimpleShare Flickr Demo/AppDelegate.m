@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "SimpleShare/SimpleShare.h"
+#import "SimpleShare.h"
+#import "MyPhotosViewController.h"
+
+#define kPhotosArrayKey @"SimpleSharePhotosArrayKey"
 
 @implementation AppDelegate
 
@@ -18,6 +21,17 @@
 #warning add a unique UUID for your app here. you can create one here: http://www.uuidgenerator.net
     //[SimpleShare sharedInstance].simpleShareAppID = @"your-uuid-goes-here";
     [SimpleShare sharedInstance].simpleShareAppID = @"b6db6f36-f4bd-4b11-807b-560371c0d10b";
+    
+    UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+    MyPhotosViewController *mainController = (MyPhotosViewController *)navController.topViewController;
+    
+    NSMutableArray *myPhotosArray = [[[NSUserDefaults standardUserDefaults] objectForKey:kPhotosArrayKey] mutableCopy];
+    
+    mainController.myPhotoIDs = myPhotosArray;
+    myPhotosArray = nil;
+    
+    mainController = nil;
+    navController = nil;
     
     return YES;
 }
@@ -32,6 +46,10 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    NSLog(@"application did enter background with ids: %@", [SimpleShare sharedInstance].myItemIDs);
+    [[NSUserDefaults standardUserDefaults] setObject:[SimpleShare sharedInstance].myItemIDs forKey:kPhotosArrayKey];
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -42,11 +60,25 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+    MyPhotosViewController *mainController = (MyPhotosViewController *)navController.topViewController;
+    
+    NSMutableArray *myPhotosArray = [[[NSUserDefaults standardUserDefaults] objectForKey:kPhotosArrayKey] mutableCopy];
+    
+    mainController.myPhotoIDs = myPhotosArray;
+    myPhotosArray = nil;
+    
+    mainController = nil;
+    navController = nil;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    NSLog(@"application will terminate with ids: %@", [SimpleShare sharedInstance].myItemIDs);
+    [[NSUserDefaults standardUserDefaults] setObject:[SimpleShare sharedInstance].myItemIDs forKey:kPhotosArrayKey];
 }
 
 @end

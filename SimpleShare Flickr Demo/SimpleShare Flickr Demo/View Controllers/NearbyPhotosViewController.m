@@ -8,13 +8,14 @@
 
 #import "NearbyPhotosViewController.h"
 #import "SimpleShare.h"
+#import "Flickr.h"
 
 @interface NearbyPhotosViewController ()
 
 @end
 
 @implementation NearbyPhotosViewController
-@synthesize nearbyPhotoIDs = _nearbyPhotoIDs, delegate;
+@synthesize nearbyPhotos = _nearbyPhotos, delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,14 +43,19 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_nearbyPhotoIDs count];
+    return [_nearbyPhotos count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nearbyPhotoCell"];
+        
+    FlickrPhoto *aPhoto = (FlickrPhoto *)[_nearbyPhotos objectAtIndex:indexPath.row];
+    NSLog(@"FlickrPhoto: %@", aPhoto.title);
+    cell.textLabel.text = aPhoto.title;
+    cell.imageView.image = aPhoto.thumbnail;
     
-    cell.textLabel.text = [_nearbyPhotoIDs objectAtIndex:indexPath.row];
+    aPhoto = nil;
     
     return cell;
 }
@@ -59,18 +65,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // added nearby photo
-    [delegate nearbyPhotosViewControllerAddedPhoto:[_nearbyPhotoIDs objectAtIndex:indexPath.row]];
+    [delegate nearbyPhotosViewControllerAddedPhoto:[_nearbyPhotos objectAtIndex:indexPath.row]];
     
     [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Added Photo", nil) message:@"The photo was added successfully." delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", nil), nil] show];
     
-    // remove the item from found items list
-    [_nearbyPhotoIDs removeObjectAtIndex:indexPath.row];
+    // remove the photo from found photos list
+    [_nearbyPhotos removeObjectAtIndex:indexPath.row];
     
-    if ([_nearbyPhotoIDs count] == 0) {
-        // dismiss the found items view since there are no more to add
+    if ([_nearbyPhotos count] == 0) {
+        // dismiss the found photos view since there are no more to add
         [self cancel:nil];
     } else {
-        // reload the tableview to remove the item from the found list
+        // reload the tableview to remove the photo from the found list
         [self.tableView reloadData];
     }
     
