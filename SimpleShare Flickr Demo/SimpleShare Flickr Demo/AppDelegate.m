@@ -19,8 +19,7 @@
     // Override point for customization after application launch.
     
 #warning add a unique UUID for your app here. you can create one here: http://www.uuidgenerator.net
-    //[SimpleShare sharedInstance].simpleShareAppID = @"your-uuid-goes-here";
-    [SimpleShare sharedInstance].simpleShareAppID = @"b6db6f36-f4bd-4b11-807b-560371c0d10b";
+    [SimpleShare sharedInstance].simpleShareAppID = @"your-uuid-goes-here";
     
     UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
     MyPhotosViewController *mainController = (MyPhotosViewController *)navController.topViewController;
