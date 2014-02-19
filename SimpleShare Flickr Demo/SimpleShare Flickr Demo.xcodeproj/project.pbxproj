@@ -28,7 +28,6 @@
 		82C5EDA218A97D2F00C43D23 /* SSShareItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5ED9F18A97D2F00C43D23 /* SSShareItemManager.m */; };
 		82C5EDA818A9836F00C43D23 /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EDA518A9836F00C43D23 /* Flickr.m */; };
 		82C5EDA918A9836F00C43D23 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EDA718A9836F00C43D23 /* FlickrPhoto.m */; };
-		82C5EDAF18A9927A00C43D23 /* TempFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5EDAE18A9927A00C43D23 /* TempFlickrViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +74,6 @@
 		82C5EDA518A9836F00C43D23 /* Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flickr.m; sourceTree = "<group>"; };
 		82C5EDA618A9836F00C43D23 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
 		82C5EDA718A9836F00C43D23 /* FlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhoto.m; sourceTree = "<group>"; };
-		82C5EDAD18A9927A00C43D23 /* TempFlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempFlickrViewController.h; path = "View Controllers/TempFlickrViewController.h"; sourceTree = "<group>"; };
-		82C5EDAE18A9927A00C43D23 /* TempFlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TempFlickrViewController.m; path = "View Controllers/TempFlickrViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +181,6 @@
 				8268599C18B43ACA0035F851 /* MyPhotoDetailViewController.m */,
 				82C5ED9618A97BE100C43D23 /* NearbyPhotosViewController.h */,
 				82C5ED9718A97BE100C43D23 /* NearbyPhotosViewController.m */,
-				82C5EDAD18A9927A00C43D23 /* TempFlickrViewController.h */,
-				82C5EDAE18A9927A00C43D23 /* TempFlickrViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -335,7 +330,6 @@
 				82C5ED5D18A97A2800C43D23 /* AppDelegate.m in Sources */,
 				82C5EDA018A97D2F00C43D23 /* SimpleShare.m in Sources */,
 				82C5ED5918A97A2800C43D23 /* main.m in Sources */,
-				82C5EDAF18A9927A00C43D23 /* TempFlickrViewController.m in Sources */,
 				82C5EDA118A97D2F00C43D23 /* SSFindItemManager.m in Sources */,
 				82C5ED9518A97BD000C43D23 /* MyPhotosViewController.m in Sources */,
 				82C5EDA218A97D2F00C43D23 /* SSShareItemManager.m in Sources */,
