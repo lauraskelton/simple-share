@@ -116,9 +116,9 @@ Usage Examples:
 @end
 ```
 
-Coming Soon
+Flickr Demo
 ===========
-A second demo app is in the works that will show how to use the shared item IDs to get useful information from one phone to another with bluetooth magic by connecting with a web API.
+A second demo app uses the Flickr API to show how to use the shared item IDs to get useful information from one phone to another with bluetooth magic by connecting with a web API. SimpleShare sends the IDs of Flickr photos over Bluetooth LE between nearby users, and connects with the Flickr API to fill in image thumbnails and titles for the photos found from nearby users.
 
 Future
 ===========

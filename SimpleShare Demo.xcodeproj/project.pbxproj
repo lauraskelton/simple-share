@@ -10,6 +10,7 @@
 		8254F2851889C5100018F42F /* SimpleShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8254F2801889C5100018F42F /* SimpleShare.m */; };
 		8254F2861889C5100018F42F /* SSFindItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8254F2821889C5100018F42F /* SSFindItemManager.m */; };
 		8254F2871889C5100018F42F /* SSShareItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8254F2841889C5100018F42F /* SSShareItemManager.m */; };
+		826859A118B450880035F851 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 826859A018B450880035F851 /* README.md */; };
 		828B09BD18B4130B00780610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B099A18B4130A00780610 /* AppDelegate.m */; };
 		828B09BE18B4130B00780610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828B099B18B4130A00780610 /* Main.storyboard */; };
 		828B09BF18B4130B00780610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 828B099D18B4130A00780610 /* InfoPlist.strings */; };
@@ -76,6 +77,7 @@
 		8254F2821889C5100018F42F /* SSFindItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFindItemManager.m; sourceTree = "<group>"; };
 		8254F2831889C5100018F42F /* SSShareItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSShareItemManager.h; sourceTree = "<group>"; };
 		8254F2841889C5100018F42F /* SSShareItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSShareItemManager.m; sourceTree = "<group>"; };
+		826859A018B450880035F851 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		828B099918B4130A00780610 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		828B099A18B4130A00780610 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		828B099C18B4130A00780610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		8295892D1881CD1D00C755C9 /* SimpleShare Demo */ = {
 			isa = PBXGroup;
 			children = (
+				826859A018B450880035F851 /* README.md */,
 				8254F27E1889C5100018F42F /* SimpleShare */,
 				82C5ED8D18A97B4600C43D23 /* App Delegate */,
 				829589681881D96300C755C9 /* View Controllers */,
@@ -445,6 +448,7 @@
 			files = (
 				829589401881CD1D00C755C9 /* Images.xcassets in Resources */,
 				828B09CB18B4130B00780610 /* InfoPlist.strings in Resources */,
+				826859A118B450880035F851 /* README.md in Resources */,
 				829589321881CD1D00C755C9 /* InfoPlist.strings in Resources */,
 				828B09CC18B4130B00780610 /* SimpleShare Flickr DemoTests-Info.plist in Resources */,
 				8295893B1881CD1D00C755C9 /* Main.storyboard in Resources */,
