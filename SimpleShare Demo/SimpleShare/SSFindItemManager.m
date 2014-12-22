@@ -334,7 +334,7 @@
 - (void)cleanup
 {
     // Don't do anything if we're not connected
-    if (!self.discoveredPeripheral.isConnected) {
+    if (self.discoveredPeripheral.state != CBPeripheralStateConnected) {
         return;
     }
     
